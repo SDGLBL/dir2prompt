@@ -29,7 +29,7 @@ When working with Claude, providing clear project context is crucial for effecti
 
 🚀 **Efficient Workflow**
 
-- Direct clipboard integration
+- Cross-platform clipboard integration
 - direnv support for environment management
 - Customizable exclusion patterns
 
@@ -39,11 +39,38 @@ When working with Claude, providing clear project context is crucial for effecti
 
 Ensure you have these dependencies installed:
 
-- [fzf](https://github.com/junegunn/fzf)
-- [fd](https://github.com/sharkdp/fd)
-- [exa](https://github.com/ogham/exa)
-- python3
-- git
+- [fzf](https://github.com/junegunn/fzf): For interactive file selection
+- [fd](https://github.com/sharkdp/fd): For file searching
+- [exa](https://github.com/ogham/exa): For directory tree visualization
+- python3: For path processing
+- git: For version control integration
+- One of the following clipboard commands:
+  - macOS: pbcopy (pre-installed)
+  - Linux: xclip, xsel, or wl-copy
+  - Windows: clip.exe (pre-installed)
+
+### Installing Dependencies
+
+```bash
+# For macOS (using Homebrew)
+brew install fzf fd exa git
+# pbcopy is pre-installed
+
+# For Ubuntu/Debian
+sudo apt update
+sudo apt install fzf fd-find exa git python3
+# Install one of these clipboard utilities:
+sudo apt install xclip
+# or
+sudo apt install xsel
+# or
+sudo apt install wl-clipboard  # For Wayland
+
+# For Windows
+# Install dependencies through package manager
+scoop install fzf fd exa git
+# clip.exe is pre-installed
+```
 
 ### Installation
 
@@ -54,10 +81,11 @@ git clone https://github.com/SDGLBL/dir2prompt.git
 cd dir2prompt
 ```
 
-2. Make the script executable:
+2. Make the scripts executable:
 
 ```bash
 chmod +x dir2prompt.sh
+chmod +x clp.sh
 ```
 
 ### Basic Usage with Claude
@@ -65,7 +93,7 @@ chmod +x dir2prompt.sh
 1. Process project and copy to clipboard:
 
 ```bash
-./dir2prompt.sh -g -a | clp
+./dir2prompt.sh -g -a | ./clp.sh
 ```
 
 2. Paste the output directly into your Claude conversation.
@@ -134,7 +162,3 @@ If you encounter any issues or have questions:
 1. Check the [User Guide](doc/USER_GUIDE.md)
 2. Look through existing [Issues](https://github.com/SDGLBL/dir2prompt/issues)
 3. Create a new issue if needed
-
----
-
-Made with ❤️ for enhancing Claude interactions

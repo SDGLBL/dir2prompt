@@ -1,4 +1,4 @@
-# Using direnv with Dir2Prompt
+# direnv Integration Guide
 
 ## Overview
 
@@ -7,8 +7,8 @@ This guide explains how to set up and use `direnv` with Dir2Prompt for efficient
 ## Prerequisites
 
 - direnv (`brew install direnv` or `apt-get install direnv`)
-- Dir2Prompt
-- `clp` script (clipboard utility)
+- Dir2Prompt installation
+- One of the supported clipboard commands
 
 ## Setup Instructions
 
@@ -16,24 +16,24 @@ This guide explains how to set up and use `direnv` with Dir2Prompt for efficient
 
 1. Install direnv:
 
-   ```bash
-   # macOS
-   brew install direnv
+```bash
+# macOS
+brew install direnv
 
-   # Ubuntu/Debian
-   sudo apt-get update
-   sudo apt-get install direnv
-   ```
+# Ubuntu/Debian
+sudo apt-get update
+sudo apt-get install direnv
+```
 
 2. Add direnv hook to your shell:
 
-   ```bash
-   # For bash, add to ~/.bashrc:
-   eval "$(direnv hook bash)"
+```bash
+# For bash, add to ~/.bashrc:
+eval "$(direnv hook bash)"
 
-   # For zsh, add to ~/.zshrc:
-   eval "$(direnv hook zsh)"
-   ```
+# For zsh, add to ~/.zshrc:
+eval "$(direnv hook zsh)"
+```
 
 ### 2. Create .envrc File
 
@@ -52,38 +52,29 @@ After creating or modifying `.envrc`, allow it with:
 direnv allow
 ```
 
-### 3. Set Up Clipboard Integration
-
-1. Install the `clp` script:
-
-   ```bash
-   # Copy the clp script to a directory in your PATH
-   sudo cp clp /usr/local/bin/
-   sudo chmod +x /usr/local/bin/clp
-   ```
-
 ## Usage
 
 ### Basic Workflow
 
 1. Navigate to your project directory:
 
-   ```bash
-   cd your-project
-   ```
+```bash
+cd your-project
+```
 
-   direnv will automatically load your environment variables.
+direnv will automatically load your environment variables.
 
 2. Copy project contents to clipboard:
 
-   ```bash
-   ./dir2prompt.sh -g -a | clp
-   ```
+```bash
+./dir2prompt.sh -g -a | ./clp.sh
+```
 
-   This command:
-   - Processes your project files (`-a` for automatic mode)
-   - Includes git staged changes (`-g`)
-   - Pipes the output to your clipboard
+This command:
+
+- Processes your project files (`-a` for automatic mode)
+- Includes git staged changes (`-g`)
+- Pipes the output to your clipboard
 
 ### Example .envrc Configurations
 
@@ -128,10 +119,14 @@ export PROCESS_PATHS="src:tests"
    - Run `direnv allow` after changes
 
 2. Clipboard issues:
-   - Check `clp` script permissions
-   - Verify `pbcopy` availability (macOS) or alternative clipboard command
+   - Verify clipboard command installation
+   - Install appropriate clipboard utility for your system
+   - Check script permissions
+   - Try running clp.sh directly to test clipboard functionality
 
 ## Additional Resources
 
 - [direnv documentation](https://direnv.net/)
-- [Dir2Prompt documentation](./USER_GUIDE.md)
+- [Dir2Prompt User Guide](./USER_GUIDE.md)
+
+Made with ❤️ for enhancing Claude interactions
