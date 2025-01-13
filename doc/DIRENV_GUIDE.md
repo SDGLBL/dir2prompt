@@ -1,13 +1,13 @@
-# Using direnv with Project File Processor
+# Using direnv with Dir2Prompt
 
 ## Overview
 
-This guide explains how to set up and use `direnv` with Project File Processor for efficient project management and clipboard integration. This workflow allows you to automatically set environment variables when entering the project directory and quickly copy project contents to your clipboard.
+This guide explains how to set up and use `direnv` with Dir2Prompt for efficient project management and clipboard integration. This workflow allows you to automatically set environment variables when entering the project directory and quickly copy project contents to your clipboard.
 
 ## Prerequisites
 
 - direnv (`brew install direnv` or `apt-get install direnv`)
-- Project File Processor
+- Dir2Prompt
 - `clp` script (clipboard utility)
 
 ## Setup Instructions
@@ -134,4 +134,4 @@ export PROCESS_PATHS="src:tests"
 ## Additional Resources
 
 - [direnv documentation](https://direnv.net/)
-- [Project File Processor documentation](./USER_GUIDE.md)
+- [Dir2Prompt documentation](./USER_GUIDE.md)

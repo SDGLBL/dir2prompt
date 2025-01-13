@@ -121,7 +121,7 @@ process_selection() {
 
 show_help() {
   cat >&2 <<EOF
-${GREEN}Project File Processor${NC}
+${GREEN}Dir2Prompt${NC}
 
 ${BLUE}Usage:${NC}
   $0 [-h|--help]         Show help

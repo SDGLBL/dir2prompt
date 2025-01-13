@@ -1,8 +1,8 @@
-# Project File Processor - User Guide
+# Dir2Prompt - User Guide
 
 ## Overview
 
-Project File Processor is a command-line tool designed to help developers efficiently process and analyze project files. It provides an interactive interface for file selection and supports automatic processing mode for batch operations.
+Dir2Prompt is a command-line tool designed to help developers efficiently process and analyze project files. It provides an interactive interface for file selection and supports automatic processing mode for batch operations.
 
 ## Prerequisites
 
