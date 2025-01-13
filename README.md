@@ -30,9 +30,9 @@ A powerful and flexible command-line tool for processing and analyzing project f
 
 Ensure you have the following dependencies installed:
 
-- fzf
-- fd
-- exa
+- [fzf](https://github.com/junegunn/fzf)
+- [fd](https://github.com/sharkdp/fd)
+- [exa](https://github.com/ogham/exa)
 - python3
 - git
 
