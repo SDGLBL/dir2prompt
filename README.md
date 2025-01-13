@@ -50,8 +50,8 @@ Ensure you have these dependencies installed:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/project-file-processor.git
-cd project-file-processor
+git clone https://github.com/SDGLBL/dir2prompt.git
+cd dir2prompt
 ```
 
 2. Make the script executable:
@@ -132,7 +132,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you encounter any issues or have questions:
 
 1. Check the [User Guide](docs/USER_GUIDE.md)
-2. Look through existing [Issues](https://github.com/yourusername/project-file-processor/issues)
+2. Look through existing [Issues](https://github.com/SDGLBL/dir2prompt/issues)
 3. Create a new issue if needed
 
 ---
