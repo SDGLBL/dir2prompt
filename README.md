@@ -65,7 +65,7 @@ Automatic mode:
 PROCESS_PATHS="src:tests" ./project-processor.sh -a
 ```
 
-For more detailed information, see the [User Guide](docs/USER_GUIDE.md).
+For more detailed information, see the [User Guide](docs/USER_GUIDE.md) and [direnv Integration Guide](docs/DIRENV_GUIDE.md) for automated environment setup and clipboard integration.
 
 ## Use Cases
 
