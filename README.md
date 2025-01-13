@@ -94,8 +94,8 @@ PROCESS_PATHS="path1:path2" # Paths for automatic processing
 
 ## Documentation
 
-- [User Guide](docs/USER_GUIDE.md) - Detailed usage instructions
-- [direnv Integration Guide](docs/DIRENV_GUIDE.md) - Automated environment setup and clipboard integration
+- [User Guide](doc/USER_GUIDE.md) - Detailed usage instructions
+- [direnv Integration Guide](doc/DIRENV_GUIDE.md) - Automated environment setup and clipboard integration
 
 ## Use Cases with Claude
 
@@ -131,7 +131,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you encounter any issues or have questions:
 
-1. Check the [User Guide](docs/USER_GUIDE.md)
+1. Check the [User Guide](doc/USER_GUIDE.md)
 2. Look through existing [Issues](https://github.com/SDGLBL/dir2prompt/issues)
 3. Create a new issue if needed
 
