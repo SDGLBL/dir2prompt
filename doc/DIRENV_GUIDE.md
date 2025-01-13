@@ -77,7 +77,7 @@ direnv allow
 2. Copy project contents to clipboard:
 
    ```bash
-   ./project-processor.sh -g -a | clp
+   ./dir2prompt.sh -g -a | clp
    ```
 
    This command:

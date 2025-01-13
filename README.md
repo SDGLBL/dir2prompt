@@ -1,34 +1,43 @@
-# Project File Processor
+# Dir2Prompt
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A powerful and flexible command-line tool for processing and analyzing project files. It provides both interactive and automatic modes for efficient file handling, with support for customizable filtering and structured output.
+A powerful command-line tool designed to streamline project file processing for Claude AI interactions. It helps developers efficiently capture and format their project structure and code for optimal collaboration with Claude, supporting both interactive and automatic modes.
+
+## Why This Tool?
+
+When working with Claude, providing clear project context is crucial for effective assistance. This tool automatically:
+
+- Formats your project files in Claude's preferred XML structure
+- Captures git changes for context-aware discussions
+- Filters relevant files to maintain focused conversations
+- Integrates with your clipboard for seamless Claude interactions
 
 ## Features
 
-🔍 **Interactive File Selection**
+🤖 **Optimized for Claude**
 
-- Fuzzy search with real-time preview
-- Directory tree visualization
-- Easy navigation and filtering
+- Generates XML-formatted output that Claude can efficiently process
+- Includes project structure visualization
+- Captures git changes for better context
 
-🚀 **Automatic Processing**
+🔍 **Smart File Selection**
 
-- Batch processing of multiple paths
+- Interactive fuzzy search with preview
+- Automatic processing of specified paths
 - Configurable file type filtering
-- Structured XML output
 
-🛠️ **Advanced Capabilities**
+🚀 **Efficient Workflow**
 
-- Git integration for staged changes
+- Direct clipboard integration
+- direnv support for environment management
 - Customizable exclusion patterns
-- Flexible depth control for directory trees
 
 ## Quick Start
 
 ### Prerequisites
 
-Ensure you have the following dependencies installed:
+Ensure you have these dependencies installed:
 
 - [fzf](https://github.com/junegunn/fzf)
 - [fd](https://github.com/sharkdp/fd)
@@ -48,31 +57,30 @@ cd project-file-processor
 2. Make the script executable:
 
 ```bash
-chmod +x project-processor.sh
+chmod +x dir2prompt.sh
 ```
 
-### Basic Usage
+### Basic Usage with Claude
 
-Interactive mode:
+1. Process project and copy to clipboard:
 
 ```bash
-./project-processor.sh
+./dir2prompt.sh -g -a | clp
 ```
 
-Automatic mode:
+2. Paste the output directly into your Claude conversation.
+
+3. Claude will have access to:
+   - Your project's file structure
+   - Relevant code files
+   - Current git changes
+   - Directory hierarchy
+
+For interactive selection:
 
 ```bash
-PROCESS_PATHS="src:tests" ./project-processor.sh -a
+./dir2prompt.sh
 ```
-
-For more detailed information, see the [User Guide](docs/USER_GUIDE.md) and [direnv Integration Guide](docs/DIRENV_GUIDE.md) for automated environment setup and clipboard integration.
-
-## Use Cases
-
-- 📁 **Project Analysis**: Quickly understand project structure and contents
-- 🔄 **Code Review**: Review changes with git integration
-- 📝 **Documentation**: Generate structured output for documentation
-- 🔍 **Code Search**: Find and process specific file types efficiently
 
 ## Configuration
 
@@ -83,6 +91,19 @@ INCLUDE_TYPES="js:py:go"    # Filter specific file types
 EXCLUDE_DIRS="temp:logs"    # Additional exclusion patterns
 PROCESS_PATHS="path1:path2" # Paths for automatic processing
 ```
+
+## Documentation
+
+- [User Guide](docs/USER_GUIDE.md) - Detailed usage instructions
+- [direnv Integration Guide](docs/DIRENV_GUIDE.md) - Automated environment setup and clipboard integration
+
+## Use Cases with Claude
+
+- 🔄 **Code Review**: Share code changes and get detailed feedback
+- 🛠️ **Refactoring**: Get suggestions for code improvements
+- 📝 **Documentation**: Generate documentation with Claude's assistance
+- 🐛 **Debugging**: Share relevant code context for problem-solving
+- 🎨 **Architecture Discussions**: Discuss project structure and design
 
 ## Contributing
 
@@ -108,7 +129,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-If you encounter any issues or have questions, please:
+If you encounter any issues or have questions:
 
 1. Check the [User Guide](docs/USER_GUIDE.md)
 2. Look through existing [Issues](https://github.com/yourusername/project-file-processor/issues)
@@ -116,4 +137,4 @@ If you encounter any issues or have questions, please:
 
 ---
 
-Made with ❤️ by [Your Name]
+Made with ❤️ for enhancing Claude interactions
